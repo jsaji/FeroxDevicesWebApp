@@ -2,8 +2,8 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
         <h1><%: Title %>.</h1>
-        <h2>Wingtip Toys can help you find the perfect gift.</h2>
-        <p class="lead">We're all about transportation toys. You can order 
-                any of our toys today. Each toy listing has detailed 
-                information to help you choose the right toy.</p>
+        <h2>Ferox Devices can help you find the piece of technology.</h2>
+        <p class="lead">We're all about technology in the modern world. You can order 
+                any of our devices today. Each product has detailed 
+                information to help you choose the right device.</p>
 </asp:Content>
