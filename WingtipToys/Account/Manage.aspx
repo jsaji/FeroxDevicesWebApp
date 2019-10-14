@@ -17,6 +17,11 @@
                 <h4>Change your account settings</h4>
                 <hr />
                 <dl class="dl-horizontal">
+                    <dt>Email:</dt>
+                    <dd> <%: Email %>
+                        <asp:HyperLink NavigateUrl="/Account/ManageEmail" Text="[Change]" Visible="false" ID="ChangeEmail" runat="server" />
+                        <asp:HyperLink NavigateUrl="/Account/ManageEmail" Text="[Create]" Visible="false" ID="CreateEmail" runat="server" />
+                    </dd>
                     <dt>Password:</dt>
                     <dd>
                         <asp:HyperLink NavigateUrl="/Account/ManagePassword" Text="[Change]" Visible="false" ID="ChangePassword" runat="server" />

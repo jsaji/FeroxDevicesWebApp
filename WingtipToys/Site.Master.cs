@@ -16,6 +16,7 @@ namespace WingtipToys
     {
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
+        private string email;
         private string _antiXsrfTokenValue;
 
         protected void Page_Init(object sender, EventArgs e)
@@ -46,7 +47,6 @@ namespace WingtipToys
                 }
                 Response.Cookies.Set(responseCookie);
             }
-
             Page.PreLoad += master_Page_PreLoad;
         }
 
@@ -96,6 +96,12 @@ namespace WingtipToys
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {
             Context.GetOwinContext().Authentication.SignOut();
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            var searchText = Server.UrlEncode(txtSearchMaster.Text); // URL encode in case of special characters
+            Response.Redirect("~/ProductSearch.aspx?srch=" + searchText);
         }
     }
 

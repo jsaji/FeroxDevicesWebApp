@@ -25,6 +25,8 @@ namespace WingtipToys.Account
             return manager.HasPassword(User.Identity.GetUserId());
         }
 
+        public string Email { get; set; }
+
         public bool HasPhoneNumber { get; private set; }
 
         public bool TwoFactorEnabled { get; private set; }
@@ -45,7 +47,7 @@ namespace WingtipToys.Account
             TwoFactorEnabled = manager.GetTwoFactorEnabled(User.Identity.GetUserId());
 
             LoginsCount = manager.GetLogins(User.Identity.GetUserId()).Count;
-
+            Email = manager.GetEmail(User.Identity.GetUserId());
             var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
 
             if (!IsPostBack)
@@ -53,6 +55,7 @@ namespace WingtipToys.Account
                 // Determine the sections to render
                 if (HasPassword(manager))
                 {
+                    ChangeEmail.Visible = true;
                     ChangePassword.Visible = true;
                 }
                 else
