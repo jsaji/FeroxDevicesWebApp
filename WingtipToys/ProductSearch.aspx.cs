@@ -22,9 +22,11 @@ namespace WingtipToys
 
     public IQueryable<Product> GetResults()
         {
-            if (!String.IsNullOrEmpty(Request.QueryString["srch"]))
+            String search = Request.QueryString["srch"];
+            if (!String.IsNullOrEmpty(search))
             {
-                return GetProducts(0, Request.QueryString["srch"]);
+                Page.Title = "Search Results for " + search;
+                return GetProducts(0, search);
 
             }
             else return GetProducts(0, "");

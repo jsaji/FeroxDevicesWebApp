@@ -2,9 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h1>Checkout Complete</h1>
     <p></p>
-    <h3>Payment Transaction ID:</h3> <asp:Label ID="TransactionId" runat="server"></asp:Label>
+    <h3>Thank You & Enjoy your day!</h3>
     <p></p>
-    <h3>Thank You!</h3>
+    <h3>Your items will be shipped to your address within 5 business days!</h3>
     <p></p>
     <hr />
     <asp:Button ID="Continue" runat="server" Text="Continue Shopping" OnClick="Continue_Click" />
