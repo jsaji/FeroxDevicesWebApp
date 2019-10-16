@@ -1,0 +1,4 @@
+drop table branches;
+
+alter table orders
+add branch nvarchar(120);

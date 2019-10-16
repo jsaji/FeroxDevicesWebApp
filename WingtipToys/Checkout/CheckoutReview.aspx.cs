@@ -28,6 +28,7 @@ namespace WingtipToys.Checkout
                 myOrder.Country = "Australia";
                 myOrder.Email = "default";
                 myOrder.Total = 0.00M;
+                myOrder.branch = "default";
                 decimal total = 0;
 
                 ProductContext _db = new ProductContext();
@@ -76,15 +77,14 @@ namespace WingtipToys.Checkout
             
         }
 
-        protected void SubmitOrder()
+        public IQueryable GetBranches()
         {
-           
+            var _db = new WingtipToys.Models.ProductContext();
+            IQueryable query = _db.Branches;
+            return query;
         }
-    
-        
 
-
-    protected void CheckoutConfirm_Click(object sender, EventArgs e)
+        protected void CheckoutConfirm_Click(object sender, EventArgs e)
     {
        if (IsValid)
             {
@@ -97,6 +97,7 @@ namespace WingtipToys.Checkout
                 myOrder.State = State.Text;
                 myOrder.PostalCode = PostalCode.Text;
                 myOrder.Email = Email.Text;
+                myOrder.branch = DropDownAddBranch.SelectedValue;
 
                 _db.Orders.Add(myOrder);
                 foreach (var item in myOrderDetails)

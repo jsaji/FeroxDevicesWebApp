@@ -15,6 +15,14 @@
     <h3>Order Total:</h3>
     <br />
     <asp:Label ID="Total" runat="server"></asp:Label>
+    <h3>Pickup from branch:</h3>
+    <br />
+    <asp:DropDownList ID="DropDownAddBranch" runat="server" 
+        ItemType="WingtipToys.Models.Branch" 
+        SelectMethod="GetBranches" DataTextField="branchname" 
+        DataValueField="username" >
+    </asp:DropDownList>
+
     <div>
         <section id="detailsForm">
             <div class="form-horizontal">

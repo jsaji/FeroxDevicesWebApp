@@ -181,6 +181,7 @@
     <Content Include="Catalog\Images\carfast.png" />
     <Content Include="Catalog\Images\carfaster.png" />
     <Content Include="Catalog\Images\carracer.png" />
+    <Content Include="Catalog\Images\notfound.png" />
     <Content Include="Catalog\Images\planeace.png" />
     <Content Include="Catalog\Images\planeglider.png" />
     <Content Include="Catalog\Images\planepaper.png" />
@@ -494,6 +495,7 @@
     <Compile Include="Logic\RoleActions.cs" />
     <Compile Include="Logic\ShoppingCartActions.cs" />
     <Compile Include="Models\CartItem.cs" />
+    <Compile Include="Models\Branch.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Order.cs" />
