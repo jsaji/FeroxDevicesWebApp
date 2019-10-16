@@ -23,6 +23,8 @@ namespace WingtipToys.Models
     [ScaffoldColumn(false)]
     public string State { get; set; }
     [ScaffoldColumn(false)]
+    public string PostCode { get; set; }
+    [ScaffoldColumn(false)]
     public string Country { get; set; }
 
     [ScaffoldColumn(false)]

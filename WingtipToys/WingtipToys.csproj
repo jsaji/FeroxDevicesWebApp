@@ -168,6 +168,8 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="AddToCart.aspx" />
+    <Content Include="Admin\AdminPageProducts.aspx" />
+    <Content Include="Admin\AdminPageTransactions.aspx" />
     <Content Include="Admin\AdminPage.aspx" />
     <Content Include="App_Readme\Elmah.txt" />
     <Content Include="Catalog\Images\boatbig.png" />
@@ -247,6 +249,8 @@
     <Content Include="ProductList.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\DBInit\s1.txt" />
+    <Content Include="Scripts\DBInit\s2.txt" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
@@ -411,6 +415,20 @@
     </Compile>
     <Compile Include="AddToCart.aspx.designer.cs">
       <DependentUpon>AddToCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminPageProducts.aspx.cs">
+      <DependentUpon>AdminPageProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminPageProducts.aspx.designer.cs">
+      <DependentUpon>AdminPageProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminPageTransactions.aspx.cs">
+      <DependentUpon>AdminPageTransactions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminPageTransactions.aspx.designer.cs">
+      <DependentUpon>AdminPageTransactions.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\AdminPage.aspx.cs">
       <DependentUpon>AdminPage.aspx</DependentUpon>

@@ -13,7 +13,7 @@
                 <EmptyDataTemplate>
                     <table >
                         <tr>
-                            <td>No data was returned.</td>
+                            <td>No products were found.</td>
                         </tr>
                     </table>
                 </EmptyDataTemplate>
