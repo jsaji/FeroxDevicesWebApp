@@ -7,9 +7,9 @@ using System.Web.UI.WebControls;
 using WingtipToys.Models;
 using WingtipToys.Logic;
 
-namespace WingtipToys.Admin
+namespace WingtipToys.Branch
 {
-  public partial class AdminPage : System.Web.UI.Page
+  public partial class BranchPage : System.Web.UI.Page
   {
    
   }
