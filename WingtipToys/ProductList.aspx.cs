@@ -35,6 +35,7 @@ namespace WingtipToys
                             String.Compare(p.Category.CategoryName,
                             categoryName) == 0);
       }
+            Page.Title = categoryName;
       return query;
     }
   }
