@@ -168,6 +168,8 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="AddToCart.aspx" />
+    <Content Include="Branch\BranchPage.aspx" />
+    <Content Include="Branch\BranchPageTransactions.aspx" />
     <Content Include="Admin\AdminPageProducts.aspx" />
     <Content Include="Admin\AdminPageTransactions.aspx" />
     <Content Include="Admin\AdminPage.aspx" />
@@ -243,6 +245,7 @@
     <Content Include="Catalog\Images\Thumbs\Thumbs.db" />
     <Content Include="Checkout\Web.config" />
     <Content Include="Admin\Web.config" />
+    <Content Include="Branch\Web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="ProductDetails.aspx" />
     <Content Include="ProductSearch.aspx" />
@@ -413,6 +416,20 @@
     </Compile>
     <Compile Include="AddToCart.aspx.designer.cs">
       <DependentUpon>AddToCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\BranchPage.aspx.cs">
+      <DependentUpon>BranchPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Branch\BranchPage.aspx.designer.cs">
+      <DependentUpon>BranchPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\BranchPageTransactions.aspx.cs">
+      <DependentUpon>BranchPageTransactions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Branch\BranchPageTransactions.aspx.designer.cs">
+      <DependentUpon>BranchPageTransactions.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\AdminPageProducts.aspx.cs">
       <DependentUpon>AdminPageProducts.aspx</DependentUpon>
