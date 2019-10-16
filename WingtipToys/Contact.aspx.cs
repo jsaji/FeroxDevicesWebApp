@@ -13,5 +13,12 @@ namespace WingtipToys
     {
 
     }
-  }
+
+    public IQueryable GetBranches()
+    {
+        var _db = new WingtipToys.Models.ProductContext();
+        IQueryable query = _db.Branches;
+        return query;
+    }
+    }
 }
