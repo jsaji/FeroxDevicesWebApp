@@ -1,0 +1,62 @@
+DELETE from cartitems;
+DELETE from orderdetails;
+DELETE from orders;
+DELETE from products;
+DELETE from categories;
+
+insert into categories(categoryname) values ('Computers and Tablets');
+insert into categories(categoryname) values ('TVs and Monitors');
+insert into categories(categoryname) values ('Headphones, Speakers and Audio');
+insert into categories(categoryname) values ('Mobile Phones');
+insert into categories(categoryname) values ('Cameras');
+
+
+insert into products(productname, description, imagepath, unitprice, categoryid) values ('Lenovo TAB E7 16GB Tablet', 'sample desc', 'notfound.png', 100.00, (select categoryid from categories where categoryname = 'Computers and Tablets'));
+insert into products(productname, description, imagepath, unitprice, categoryid) values ('Lenovo Yogo 720 Laptop', 'sample desc', 'notfound.png', 100.00, (select categoryid from categories where categoryname = 'Computers and Tablets'));
+insert into products(productname, description, imagepath, unitprice, categoryid) values ('Dell XPS 13 2in1 Laptop', 'sample desc', 'notfound.png', 100.00, (select categoryid from categories where categoryname = 'Computers and Tablets'));
+insert into products(productname, description, imagepath, unitprice, categoryid) values ('Alienware Area 51 Gaming Desktop', 'sample desc', 'notfound.png', 100.00, (select categoryid from categories where categoryname = 'Computers and Tablets'));
+insert into products(productname, description, imagepath, unitprice, categoryid) values ('HP Omen Gaming Desktop', 'sample desc', 'notfound.png', 100.00, (select categoryid from categories where categoryname = 'Computers and Tablets'));
+insert into products(productname, description, imagepath, unitprice, categoryid) values ('Samsung CHG90 Monitor', 'sample desc', 'notfound.png', 100.00, (select categoryid from categories where categoryname = 'TVs and Monitors'));
+insert into products(productname, description, imagepath, unitprice, categoryid) values ('Asus PG35V Monitor', 'sample desc', 'notfound.png', 100.00, (select categoryid from categories where categoryname = 'TVs and Monitors'));
+insert into products(productname, description, imagepath, unitprice, categoryid) values ('Canon PIXMA Pro-100 Printer', 'sample desc', 'notfound.png', 100.00, (select categoryid from categories where categoryname = 'Computers and Tablets'));
+insert into products(productname, description, imagepath, unitprice, categoryid) values ('HP OfficeJet 3830 Printer', 'sample desc', 'notfound.png', 100.00, (select categoryid from categories where categoryname = 'Computers and Tablets'));
+insert into products(productname, description, imagepath, unitprice, categoryid) values ('Apple iPad Pro 2019', 'sample desc', 'notfound.png', 100.00, (select categoryid from categories where categoryname = 'Computers and Tablets' ));
+insert into products(productname, description, imagepath, unitprice, categoryid) values ('Seagate Backup Plus Slim Storage', 'sample desc', 'notfound.png', 100.00, (select categoryid from categories where categoryname = 'Computers and Tablets'));
+insert into products(productname, description, imagepath, unitprice, categoryid) values ('Samsung T5 Portable SSD Accessories', 'sample desc', 'notfound.png', 100.00, (select categoryid from categories where categoryname = 'Computers and Tablets'));
+insert into products(productname, description, imagepath, unitprice, categoryid) values ('Microsoft Surface Mouse Accessories', 'sample desc', 'notfound.png', 100.00, (select categoryid from categories where categoryname = 'Computers and Tablets'));
+insert into products(productname, description, imagepath, unitprice, categoryid) values ('LG C9 TV', 'sample desc', 'notfound.png', 100.00, (select categoryid from categories where categoryname = 'TVs and Monitors'));
+insert into products(productname, description, imagepath, unitprice, categoryid) values ('Anymote Remote TV Accessories', 'sample desc', 'notfound.png', 100.00, (select categoryid from categories where categoryname = 'TVs and Monitors'));
+insert into products(productname, description, imagepath, unitprice, categoryid) values ('Apple iPhone XS', 'sample desc', 'notfound.png', 100.00, (select categoryid from categories where categoryname = 'Mobile Phones' ));
+insert into products(productname, description, imagepath, unitprice, categoryid) values ('Samsung Galaxy S10', 'sample desc', 'notfound.png', 100.00, (select categoryid from categories where categoryname = 'Mobile Phones'));
+insert into products(productname, description, imagepath, unitprice, categoryid) values ('Google Pixel 4', 'sample desc', 'notfound.png', 100.00, (select categoryid from categories where categoryname = 'Mobile Phones'));
+insert into products(productname, description, imagepath, unitprice, categoryid) values ('Sony Xperia 10 Plus', 'sample desc', 'notfound.png', 100.00, (select categoryid from categories where categoryname = 'Mobile Phones'));
+insert into products(productname, description, imagepath, unitprice, categoryid) values ('Nokia Nokia 7 Plus', 'sample desc', 'notfound.png', 100.00, (select categoryid from categories where categoryname = 'Mobile Phones'));
+insert into products(productname, description, imagepath, unitprice, categoryid) values ('Apple iPhone XS Battery Case', 'sample desc', 'notfound.png', 100.00, (select categoryid from categories where categoryname = 'Mobile Phones'));
+insert into products(productname, description, imagepath, unitprice, categoryid) values ('Fuji X20 Compact Camera', 'sample desc', 'notfound.png', 100.00, (select categoryid from categories where categoryname = 'Cameras'));
+insert into products(productname, description, imagepath, unitprice, categoryid) values ('Sony A7 MarkIII', 'sample desc', 'notfound.png', 100.00, (select categoryid from categories where categoryname = 'Cameras'));
+insert into products(productname, description, imagepath, unitprice, categoryid) values ('GoPro Hero 6 Black', 'sample desc', 'notfound.png', 100.00, (select categoryid from categories where categoryname = 'Cameras'));
+insert into products(productname, description, imagepath, unitprice, categoryid) values ('Garmin Dash Cam 55', 'sample desc', 'notfound.png', 100.00, (select categoryid from categories where categoryname = 'Cameras'));
+insert into products(productname, description, imagepath, unitprice, categoryid) values ('Canon 18-55mm IS STM Lens', 'sample desc', 'notfound.png', 100.00, (select categoryid from categories where categoryname = 'Cameras'));
+insert into products(productname, description, imagepath, unitprice, categoryid) values ('GoPro Hero Battery', 'sample desc', 'notfound.png', 100.00, (select categoryid from categories where categoryname = 'Cameras' ));
+insert into products(productname, description, imagepath, unitprice, categoryid) values ('Kingston HyperX Fury Black RAM', 'sample desc', 'notfound.png', 100.00, (select categoryid from categories where categoryname = 'Computers and Tablets' ));
+
+CREATE TABLE Branches (	
+	branchid	INTEGER IDENTITY(1,1),
+	branchname	NVARCHAR(64) NOT NULL,
+	streetno	NVARCHAR(16) NOT NULL,
+	street		NVARCHAR(64) NOT NULL,
+	suburb		NVARCHAR(64) NOT NULL,
+	state		NVARCHAR(20) NOT NULL,
+	postcode	NVARCHAR(20) NOT NULL,
+	country		NVARCHAR(20) NOT NULL,
+	username 	NVARCHAR(120) NOT NULL,
+CONSTRAINT branch_pk PRIMARY KEY (branchid)
+);
+
+insert into branches(branchname, streetno, street, suburb, state, postcode, country, username) values ('Ferox Sydney', '628', 'Jones Street', 'Ultimo', 'NSW', '2007','AU', 'sydney@ferox.com');
+insert into branches(branchname, streetno, street, suburb, state, postcode, country, username) values ('Ferox Melbourne', '169', 'Ormond Road', 'Elwood', 'VIC', '3148','AU', 'melbourne@ferox.com');
+insert into branches(branchname, streetno, street, suburb, state, postcode, country, username) values ('Ferox Adelaide', '111', 'Halifax Street', 'Adelaide', 'SA', '5000','AU', 'adelaide@ferox.com');
+insert into branches(branchname, streetno, street, suburb, state, postcode, country, username) values ('Ferox Brisbane', '138', 'Queen Street', 'Brisbane City', 'QLD', '4000','AU', 'brisbane@ferox.com');
+insert into branches(branchname, streetno, street, suburb, state, postcode, country, username) values ('Ferox Darwin', '4', 'Albatross Street', 'Winnellie', 'NT', '0820','AU', 'darwin@ferox.com');
+insert into branches(branchname, streetno, street, suburb, state, postcode, country, username) values ('Ferox Perth', '29', 'Durban Street', 'Belmont', 'WA', '6104','AU', 'perth@ferox.com');
+

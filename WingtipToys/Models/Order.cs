@@ -61,6 +61,8 @@ namespace WingtipToys.Models
 
     [ScaffoldColumn(false)]
     public bool HasBeenShipped { get; set; }
+    [ScaffoldColumn(false)]
+    public string branch { get; set; }
 
     public List<OrderDetail> OrderDetails { get; set; }
   }

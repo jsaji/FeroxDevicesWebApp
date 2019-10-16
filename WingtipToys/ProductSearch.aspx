@@ -13,7 +13,7 @@
                 <EmptyDataTemplate>
                     <table >
                         <tr>
-                            <td>No data was returned.</td>
+                            <td>No products were found.</td>
                         </tr>
                     </table>
                 </EmptyDataTemplate>
@@ -32,7 +32,7 @@
                                 <td>
                                   <a href="<%#: GetRouteUrl("ProductByNameRoute", new {productName = Item.ProductName}) %>">
                                     <image src='/Catalog/Images/Thumbs/<%#:Item.ImagePath%>'
-                                      width="100" height="75" border="1" />
+                                      width="150" height="150" border="1" />
                                   </a>
                                 </td>
                             </tr>
