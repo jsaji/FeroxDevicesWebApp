@@ -221,8 +221,16 @@
     <Content Include="Content\Site.css" />
     <Content Include="ErrorPage.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Images\beats.jpeg" />
+    <Content Include="Images\ferox-new-1.jpg" />
+    <Content Include="Images\ferox-new.jpg" />
+    <Content Include="Images\fitbit-versa.jpg" />
+    <Content Include="Images\gopro-hero7.jpg" />
+    <Content Include="Images\hp-spectre.jpg" />
+    <Content Include="Images\iphone-11-og-201909.jpg" />
     <Content Include="Images\logo.jpg" />
     <Content Include="Images\logonew.png" />
+    <Content Include="Images\samsung-qled.jpg" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
