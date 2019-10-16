@@ -18,8 +18,11 @@
                         <br />
                         <span><b>Price:</b>&nbsp;<%#: String.Format("{0:c}", Item.UnitPrice) %></span>
                         <br />
-                        <span><b>Product Number:</b>&nbsp;<%#:Item.ProductID %></span>
-                        <br />
+                        <a href="/AddToCart.aspx?productID=<%#:Item.ProductID %>">               
+                            <span>
+                                <b>Add To Cart<b>
+                            </span>           
+                        </a>
                     </td>
                 </tr>
             </table>
