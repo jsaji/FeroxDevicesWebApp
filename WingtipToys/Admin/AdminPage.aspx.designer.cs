@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WingtipToys.Admin {
-    
-    
-    public partial class AdminPage {
-        
+namespace WingtipToys.Admin
+{
+
+
+    public partial class AdminPage
+    {
+
         /// <summary>
         /// LabelAddCategory control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace WingtipToys.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelAddCategory;
-        
+
         /// <summary>
         /// DropDownAddCategory control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace WingtipToys.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownAddCategory;
-        
+
         /// <summary>
         /// LabelAddName control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace WingtipToys.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelAddName;
-        
+
         /// <summary>
         /// AddProductName control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace WingtipToys.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox AddProductName;
-        
+
         /// <summary>
         /// RequiredFieldValidator1 control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace WingtipToys.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
-        
+
         /// <summary>
         /// LabelAddDescription control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace WingtipToys.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelAddDescription;
-        
+
         /// <summary>
         /// AddProductDescription control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace WingtipToys.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox AddProductDescription;
-        
+
         /// <summary>
         /// RequiredFieldValidator2 control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace WingtipToys.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
-        
+
         /// <summary>
         /// LabelAddPrice control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace WingtipToys.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelAddPrice;
-        
+
         /// <summary>
         /// AddProductPrice control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace WingtipToys.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox AddProductPrice;
-        
+
         /// <summary>
         /// RequiredFieldValidator3 control.
         /// </summary>
@@ -110,7 +112,7 @@ namespace WingtipToys.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
-        
+
         /// <summary>
         /// RegularExpressionValidator1 control.
         /// </summary>
@@ -119,7 +121,7 @@ namespace WingtipToys.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
-        
+
         /// <summary>
         /// LabelAddImageFile control.
         /// </summary>
@@ -128,7 +130,7 @@ namespace WingtipToys.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelAddImageFile;
-        
+
         /// <summary>
         /// ProductImage control.
         /// </summary>
@@ -137,7 +139,7 @@ namespace WingtipToys.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload ProductImage;
-        
+
         /// <summary>
         /// RequiredFieldValidator4 control.
         /// </summary>
@@ -146,7 +148,7 @@ namespace WingtipToys.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
-        
+
         /// <summary>
         /// AddProductButton control.
         /// </summary>
@@ -155,7 +157,7 @@ namespace WingtipToys.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button AddProductButton;
-        
+
         /// <summary>
         /// LabelAddStatus control.
         /// </summary>
@@ -164,7 +166,7 @@ namespace WingtipToys.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelAddStatus;
-        
+
         /// <summary>
         /// LabelRemoveProduct control.
         /// </summary>
@@ -173,7 +175,7 @@ namespace WingtipToys.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelRemoveProduct;
-        
+
         /// <summary>
         /// DropDownRemoveProduct control.
         /// </summary>
@@ -182,7 +184,7 @@ namespace WingtipToys.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownRemoveProduct;
-        
+
         /// <summary>
         /// RemoveProductButton control.
         /// </summary>
@@ -191,7 +193,7 @@ namespace WingtipToys.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button RemoveProductButton;
-        
+
         /// <summary>
         /// LabelRemoveStatus control.
         /// </summary>
@@ -200,5 +202,23 @@ namespace WingtipToys.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelRemoveStatus;
+
+        /// <summary>
+        /// GridView1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView1;
+
+        /// <summary>
+        /// SqlDataSource1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
     }
 }
