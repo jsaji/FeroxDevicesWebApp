@@ -74,6 +74,10 @@ namespace WingtipToys
           {
             adminLink.Visible = true;
           }
+          if (HttpContext.Current.User.IsInRole("isBranch"))
+          {
+             branchLink.Visible = true;
+          }
         }
 
         protected void Page_PreRender(object sender, EventArgs e)

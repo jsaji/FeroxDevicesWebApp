@@ -25,7 +25,7 @@ namespace WingtipToys
             String search = Request.QueryString["srch"];
             if (!String.IsNullOrEmpty(search))
             {
-                Page.Title = "Search Results for " + search;
+                Page.Title = "Search Results for " + search + ".";
                 return GetProducts(0, search);
 
             }

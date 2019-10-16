@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WingtipToys.SiteMaster" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WingtipToys.SiteMaster" %>
 
 <!DOCTYPE html>
 
@@ -46,12 +46,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/"><img src="Images/ferox-new.jpg" style="max-width:120px; max-height:33px; padding-top:0px; vertical-align:top;" /></a>
+                    <a class="navbar-brand" runat="server" href="~/"><asp:Image runat="server" ImageUrl="~/Images/ferox-new.jpg" BorderStyle="None" style="max-width:120px; max-height:33px; padding-top:0px; vertical-align:top;" /></a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" id="adminLink" visible="false" 
-                          href="~/Admin/AdminPage">Admin</a></li>
+                          href="~/Admin/AdminPage.aspx">Admin</a></li>
+                        <li><a runat="server" id="branchLink" visible="false" 
+                          href="~/Branch/BranchPage.aspx">Branch</a></li>
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
                         <li><a runat="server" href="~/ProductList">Products</a></li>

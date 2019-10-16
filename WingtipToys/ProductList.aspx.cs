@@ -34,7 +34,10 @@ namespace WingtipToys
         query = query.Where(p =>
                             String.Compare(p.Category.CategoryName,
                             categoryName) == 0);
+        Page.Title = categoryName + ".";
       }
+     
+            
       return query;
     }
   }
