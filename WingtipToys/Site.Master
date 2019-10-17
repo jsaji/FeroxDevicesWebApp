@@ -48,6 +48,8 @@
                     <ul class="nav navbar-nav">
                         <li><a runat="server" id="adminLink" visible="false" 
                           href="~/Admin/AdminPage">Admin</a></li>
+                        <li><a runat="server" id="branchLink" visible="false" 
+                          href="~/Branch/BranchPage">Branch</a></li>
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
