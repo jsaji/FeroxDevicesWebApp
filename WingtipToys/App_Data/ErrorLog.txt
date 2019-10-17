@@ -175,32 +175,79 @@ Exception Type: System.Exception
 Exception: The error was unhandled by application code.
 Source: customErrors section - Web.config
 Stack Trace: 
-********** 17/10/2019 9:37:48 PM **********
+********** 17/10/2019 10:58:48 PM **********
+Inner Exception Type: System.InvalidOperationException
+Inner Exception: A public method with the name 'GetRecomendations' was either not found or there were multiple methods with the same name on the type 'ASP.productdetails_aspx'.
+Inner Source: System.Web
+Inner Stack Trace: 
+   at System.Web.UI.WebControls.ModelDataSourceView.FindMethod(String methodName)
+   at System.Web.UI.WebControls.ModelDataSourceView.EvaluateSelectParameters()
+   at System.Web.UI.WebControls.ModelDataSourceView.OnPageLoadComplete(Object sender, EventArgs e)
+   at System.EventHandler.Invoke(Object sender, EventArgs e)
+   at System.Web.UI.Page.OnLoadComplete(EventArgs e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+Exception Type: System.Web.HttpUnhandledException
+Exception: Exception of type 'System.Web.HttpUnhandledException' was thrown.
+Source: Application_Error - Global.asax
+Stack Trace: 
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.productdetails_aspx.ProcessRequest(HttpContext context) in c:\Users\Joshua\AppData\Local\Temp\Temporary ASP.NET Files\vs\e9f17324\e6c0fd4f\App_Web_jed5005c.3.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+********** 17/10/2019 11:48:04 PM **********
+Inner Exception Type: System.InvalidOperationException
+Inner Exception: A public method with the name 'GetRecomendations' was either not found or there were multiple methods with the same name on the type 'ASP.productdetails_aspx'.
+Inner Source: System.Web
+Inner Stack Trace: 
+   at System.Web.UI.WebControls.ModelDataSourceView.FindMethod(String methodName)
+   at System.Web.UI.WebControls.ModelDataSourceView.EvaluateSelectParameters()
+   at System.Web.UI.WebControls.ModelDataSourceView.OnPageLoadComplete(Object sender, EventArgs e)
+   at System.EventHandler.Invoke(Object sender, EventArgs e)
+   at System.Web.UI.Page.OnLoadComplete(EventArgs e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+Exception Type: System.Web.HttpUnhandledException
+Exception: Exception of type 'System.Web.HttpUnhandledException' was thrown.
+Source: Application_Error - Global.asax
+Stack Trace: 
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.productdetails_aspx.ProcessRequest(HttpContext context) in c:\Users\Joshua\AppData\Local\Temp\Temporary ASP.NET Files\vs\e9f17324\e6c0fd4f\App_Web_azp4uymv.5.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+********** 18/10/2019 12:27:52 AM **********
 Exception Type: System.Exception
 Exception: The error was unhandled by application code.
 Source: customErrors section - Web.config
 Stack Trace: 
-********** 17/10/2019 9:37:56 PM **********
+********** 18/10/2019 12:28:42 AM **********
 Exception Type: System.Exception
 Exception: The error was unhandled by application code.
 Source: customErrors section - Web.config
 Stack Trace: 
-********** 17/10/2019 9:40:28 PM **********
+********** 18/10/2019 12:31:29 AM **********
 Exception Type: System.Exception
 Exception: The error was unhandled by application code.
 Source: customErrors section - Web.config
 Stack Trace: 
-********** 17/10/2019 10:54:57 PM **********
+********** 18/10/2019 12:31:52 AM **********
 Exception Type: System.Exception
 Exception: The error was unhandled by application code.
 Source: customErrors section - Web.config
 Stack Trace: 
-********** 17/10/2019 10:57:49 PM **********
-Exception Type: System.Exception
-Exception: The error was unhandled by application code.
-Source: customErrors section - Web.config
-Stack Trace: 
-********** 18/10/2019 12:43:59 AM **********
+********** 18/10/2019 12:32:25 AM **********
 Exception Type: System.Exception
 Exception: The error was unhandled by application code.
 Source: customErrors section - Web.config
