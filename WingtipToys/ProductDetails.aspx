@@ -17,6 +17,9 @@
                         <b>Description:</b><br /><%#:Item.Description %>
                         <br />
                         <br />
+                        
+                        <br />
+                        <br />
                         <span><b>Price:</b>&nbsp;<%#: String.Format("{0:c}", Item.UnitPrice) %></span>
                         <br />
                         <br />
@@ -30,4 +33,5 @@
             </table>
         </ItemTemplate>
     </asp:FormView>
+    <asp:Label ID="stock" runat="server" Text="Something went wrong"></asp:Label>
 </asp:Content>

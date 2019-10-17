@@ -13,7 +13,7 @@ namespace WingtipToys
   {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+            
     }
 
     public IQueryable<Product> GetProduct(
@@ -21,6 +21,7 @@ namespace WingtipToys
                         [RouteData] string productName)
     {
       var _db = new WingtipToys.Models.ProductContext();
+            String StockText;
       IQueryable<Product> query = _db.Products;
       if (productId.HasValue && productId > 0)
       {
@@ -35,6 +36,12 @@ namespace WingtipToys
       {
         query = null;
       }
+            foreach (var product in query)
+            {
+                if (product.Stock > 10) stock.Text = "More than 10 available";
+                else if (product.Stock < 0) stock.Text = "On back order";
+                else stock.Text = "Less than 10 available";
+            }
       return query;
     }
 
