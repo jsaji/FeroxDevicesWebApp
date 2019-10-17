@@ -50,6 +50,7 @@
                             <asp:CheckBoxField DataField="HasBeenShipped" HeaderText="HasBeenShipped" SortExpression="HasBeenShipped" />
                             <asp:BoundField DataField="branch" HeaderText="branch" SortExpression="branch" />
                         </Columns>
+                        <EmptyDataTemplate>No Record Available</EmptyDataTemplate>
                     </asp:GridView>
                     <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:WingtipToys %>" SelectCommand="SELECT * FROM [Orders] WHERE ([Username] = @Username)">
                         <SelectParameters>
