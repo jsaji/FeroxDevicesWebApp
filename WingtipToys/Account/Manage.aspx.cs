@@ -48,6 +48,9 @@ namespace WingtipToys.Account
 
             LoginsCount = manager.GetLogins(User.Identity.GetUserId()).Count;
             Email = manager.GetEmail(User.Identity.GetUserId());
+
+            Session["Email"] = Email;
+
             var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
 
             if (!IsPostBack)

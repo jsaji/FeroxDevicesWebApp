@@ -9,7 +9,7 @@ using WingtipToys.Logic;
 
 namespace WingtipToys.Admin
 {
-  public partial class AdminPage : System.Web.UI.Page
+  public partial class AdminPageProducts : System.Web.UI.Page
   {
    
   }

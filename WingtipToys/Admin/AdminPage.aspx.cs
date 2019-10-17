@@ -25,7 +25,17 @@ namespace WingtipToys.Admin
       }
     }
 
-    protected void AddProductButton_Click(object sender, EventArgs e)
+        protected void ManageProductsButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Admin/AdminPageProducts.aspx");
+        }
+
+        protected void ViewTransactionsButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Admin/AdminPageTransactions.aspx");
+        }
+
+        protected void AddProductButton_Click(object sender, EventArgs e)
     {
       Boolean fileOK = false;
       String path = Server.MapPath("~/Catalog/Images/");
@@ -59,7 +69,7 @@ namespace WingtipToys.Admin
         // Add product data to DB.
         AddProducts products = new AddProducts();
         bool addSuccess = products.AddProduct(AddProductName.Text, AddProductDescription.Text,
-            AddProductPrice.Text, DropDownAddCategory.SelectedValue, ProductImage.FileName);
+            AddProductPrice.Text, DropDownAddCategory.SelectedValue, ProductImage.FileName, AddStock.Text);
         if (addSuccess)
         {
           // Reload the page.

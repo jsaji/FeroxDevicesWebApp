@@ -2,10 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h1>Administration</h1>
  
-    <asp:HyperLink ID="ProductLink" runat="server"  href="AdminPageProducts" BorderColor="#3333FF" BorderWidth="2px" Height="34px" Width="114px" >Manage Products</asp:HyperLink>
-
+    <asp:Button ID="ProductLink2" runat="server" Text="Manage Products" OnClick="ManageProductsButton_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  
-    <asp:HyperLink ID="TransactionLink" runat="server"  href="AdminPageTransactions" BorderColor="#3333FF" BorderWidth="2px" Height="34px" Width="114px" >Review Transactions</asp:HyperLink>
-
+     <asp:Button ID="TransactionLink2" runat="server" Text="View Transactions" OnClick="ViewTransactionsButton_Click" />
 </asp:Content>

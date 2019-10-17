@@ -32,6 +32,7 @@ namespace WingtipToys.Checkout
           using (WingtipToys.Logic.ShoppingCartActions usersShoppingCart =
               new WingtipToys.Logic.ShoppingCartActions())
           {
+                    usersShoppingCart.ReduceStock();
             usersShoppingCart.EmptyCart();
           }
 
@@ -40,6 +41,7 @@ namespace WingtipToys.Checkout
         }
       
     }
+
 
     protected void Continue_Click(object sender, EventArgs e)
     {
