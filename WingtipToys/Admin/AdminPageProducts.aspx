@@ -43,6 +43,13 @@
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" Text="* Image path required." ControlToValidate="ProductImage" SetFocusOnError="true" Display="Dynamic"></asp:RequiredFieldValidator>
             </td>
         </tr>
+        <tr>
+            <td><asp:Label ID="LabelAddStock" runat="server">Stock:</asp:Label></td>
+            <td>
+                <asp:TextBox ID="AddStock" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" Text="* Stock must be a valid number." ControlToValidate="AddStock" SetFocusOnError="true" Display="Dynamic"></asp:RequiredFieldValidator>
+            </td>
+        </tr>
     </table>
     <p></p>
     <p></p>
@@ -67,25 +74,25 @@
     <br />
     <h3>Edit Product:</h3>
     <br />
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ProductID" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="1290px">
+    <asp:GridView ID="AllProductsView" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ProductID" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="1290px">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
-            <asp:BoundField DataField="ProductID" HeaderText="ProductID" InsertVisible="False" ReadOnly="True" SortExpression="ProductID" ItemStyle-Width="20%" >
-<ItemStyle Width="20%"></ItemStyle>
-            </asp:BoundField>
-            <asp:BoundField DataField="ProductName" HeaderText="ProductName" SortExpression="ProductName" ItemStyle-Width="20%" >
+            <asp:BoundField DataField="ProductName" HeaderText="Produc tName" SortExpression="ProductName" ItemStyle-Width="20%" >
 <ItemStyle Width="20%"></ItemStyle>
             </asp:BoundField>
             <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" ItemStyle-Width="20%">
 <ItemStyle Width="20%"></ItemStyle>
             </asp:BoundField>
-            <asp:BoundField DataField="ImagePath" HeaderText="ImagePath" SortExpression="ImagePath" ItemStyle-Width="20%" >
+            <asp:BoundField DataField="ImagePath" HeaderText="Image" SortExpression="ImagePath" ItemStyle-Width="20%" >
 <ItemStyle Width="20%"></ItemStyle>
             </asp:BoundField>
-            <asp:BoundField DataField="UnitPrice" HeaderText="UnitPrice" SortExpression="UnitPrice" ItemStyle-Width="20%" >
+            <asp:BoundField DataField="UnitPrice" HeaderText="Unit Price" SortExpression="UnitPrice" ItemStyle-Width="20%" >
 <ItemStyle Width="20%"></ItemStyle>
             </asp:BoundField>
-            <asp:BoundField DataField="CategoryID" HeaderText="CategoryID" SortExpression="CategoryID" ItemStyle-Width="20%" >
+            <asp:BoundField DataField="CategoryID" HeaderText="Category ID" SortExpression="CategoryID" ItemStyle-Width="20%" >
+<ItemStyle Width="20%"></ItemStyle>
+            </asp:BoundField>
+            <asp:BoundField DataField="Stock" HeaderText="Stock" SortExpression="Stock" ItemStyle-Width="20%" >
 <ItemStyle Width="20%"></ItemStyle>
             </asp:BoundField>
             <asp:ButtonField ButtonType="Button" CommandName="Edit" HeaderText="Edit Item" ShowHeader="True" Text="Edit" ItemStyle-Width="20%">
@@ -106,7 +113,7 @@
         <SortedDescendingCellStyle BackColor="#E9EBEF" />
         <SortedDescendingHeaderStyle BackColor="#4870BE" />
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:WingtipToys %>" DeleteCommand="DELETE FROM [Products] WHERE [ProductID] = @original_ProductID AND [ProductName] = @original_ProductName AND [Description] = @original_Description AND (([ImagePath] = @original_ImagePath) OR ([ImagePath] IS NULL AND @original_ImagePath IS NULL)) AND (([UnitPrice] = @original_UnitPrice) OR ([UnitPrice] IS NULL AND @original_UnitPrice IS NULL)) AND (([CategoryID] = @original_CategoryID) OR ([CategoryID] IS NULL AND @original_CategoryID IS NULL))" InsertCommand="INSERT INTO [Products] ([ProductName], [Description], [ImagePath], [UnitPrice], [CategoryID]) VALUES (@ProductName, @Description, @ImagePath, @UnitPrice, @CategoryID)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [Products]" UpdateCommand="UPDATE [Products] SET [ProductName] = @ProductName, [Description] = @Description, [ImagePath] = @ImagePath, [UnitPrice] = @UnitPrice, [CategoryID] = @CategoryID WHERE [ProductID] = @original_ProductID AND [ProductName] = @original_ProductName AND [Description] = @original_Description AND (([ImagePath] = @original_ImagePath) OR ([ImagePath] IS NULL AND @original_ImagePath IS NULL)) AND (([UnitPrice] = @original_UnitPrice) OR ([UnitPrice] IS NULL AND @original_UnitPrice IS NULL)) AND (([CategoryID] = @original_CategoryID) OR ([CategoryID] IS NULL AND @original_CategoryID IS NULL))">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:WingtipToys %>" DeleteCommand="DELETE FROM [Products] WHERE [ProductID] = @original_ProductID" InsertCommand="INSERT INTO [Products] ([ProductName], [Description], [ImagePath], [UnitPrice], [CategoryID]) VALUES (@ProductName, @Description, @ImagePath, @UnitPrice, @CategoryID)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [Products]" UpdateCommand="UPDATE [Products] SET [ProductName] = @ProductName, [Description] = @Description, [ImagePath] = @ImagePath, [UnitPrice] = @UnitPrice, [CategoryID] = @CategoryID, [Stock] = @Stock WHERE [ProductID] = @original_ProductID">
         <DeleteParameters>
             <asp:Parameter Name="original_ProductID" Type="Int32" />
             <asp:Parameter Name="original_ProductName" Type="String" />
@@ -114,6 +121,7 @@
             <asp:Parameter Name="original_ImagePath" Type="String" />
             <asp:Parameter Name="original_UnitPrice" Type="Double" />
             <asp:Parameter Name="original_CategoryID" Type="Int32" />
+            <asp:Parameter Name="original_Stock" Type="Int32" />
         </DeleteParameters>
         <InsertParameters>
             <asp:Parameter Name="ProductName" Type="String" />
@@ -121,6 +129,7 @@
             <asp:Parameter Name="ImagePath" Type="String" />
             <asp:Parameter Name="UnitPrice" Type="Double" />
             <asp:Parameter Name="CategoryID" Type="Int32" />
+            <asp:Parameter Name="Stock" Type="Int32" />
         </InsertParameters>
         <UpdateParameters>
             <asp:Parameter Name="ProductName" Type="String" />
@@ -128,12 +137,14 @@
             <asp:Parameter Name="ImagePath" Type="String" />
             <asp:Parameter Name="UnitPrice" Type="Double" />
             <asp:Parameter Name="CategoryID" Type="Int32" />
+            <asp:Parameter Name="Stock" Type="Int32" />
             <asp:Parameter Name="original_ProductID" Type="Int32" />
             <asp:Parameter Name="original_ProductName" Type="String" />
             <asp:Parameter Name="original_Description" Type="String" />
             <asp:Parameter Name="original_ImagePath" Type="String" />
             <asp:Parameter Name="original_UnitPrice" Type="Double" />
             <asp:Parameter Name="original_CategoryID" Type="Int32" />
+            <asp:Parameter Name="original_Stock" Type="Int32" />
         </UpdateParameters>
     </asp:SqlDataSource>
 

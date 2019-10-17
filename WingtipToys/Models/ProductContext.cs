@@ -7,7 +7,12 @@ namespace WingtipToys.Models
       : base("WingtipToys")
     {
     }
-    public DbSet<Category> Categories { get; set; }
+    protected override void OnModelCreating(DbModelBuilder modelBuilder)
+    {
+        Database.SetInitializer<ProductContext>(null);
+        base.OnModelCreating(modelBuilder);
+    }
+        public DbSet<Category> Categories { get; set; }
     public DbSet<Branch> Branches { get; set; }
     public DbSet<Product> Products { get; set; }
     public DbSet<CartItem> ShoppingCartItems { get; set; }

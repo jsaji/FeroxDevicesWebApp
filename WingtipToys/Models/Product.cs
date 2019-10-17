@@ -21,5 +21,7 @@ namespace WingtipToys.Models
     public int? CategoryID { get; set; }
 
     public virtual Category Category { get; set; }
-  }
+
+    public int Stock { get; set; }
+    }
 }

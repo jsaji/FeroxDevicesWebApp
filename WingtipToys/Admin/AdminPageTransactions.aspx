@@ -1,27 +1,21 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AdminPageTransactions.aspx.cs" Inherits="WingtipToys.Admin.AdminPage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AdminPageTransactions.aspx.cs" Inherits="WingtipToys.Admin.AdminPageTransactions" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h1>Transaction Administration</h1>
     <hr />
     <h3>View Transactions</h3>
     <p>
-        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="OrderId" DataSourceID="SqlDataSource2" ForeColor="#333333" GridLines="None" Width="1377px">
+        <asp:GridView ID="AllTransactionsView" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="OrderId, ProductName" DataSourceID="AllTransactionsSource" ForeColor="#333333" GridLines="None" Width="1200px">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
-                <asp:BoundField DataField="OrderId" HeaderText="OrderId" InsertVisible="False" ReadOnly="True" SortExpression="OrderId" />
-                <asp:BoundField DataField="OrderDate" HeaderText="OrderDate" SortExpression="OrderDate" />
-                <asp:BoundField DataField="Username" HeaderText="Username" SortExpression="Username" />
-                <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName" />
-                <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName" />
-                <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
-                <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
-                <asp:BoundField DataField="State" HeaderText="State" SortExpression="State" />
-                <asp:BoundField DataField="PostalCode" HeaderText="PostalCode" SortExpression="PostalCode" />
-                <asp:BoundField DataField="Country" HeaderText="Country" SortExpression="Country" />
-                <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
-                <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+                <asp:BoundField DataField="OrderId" HeaderText="Order ID" SortExpression="OrderId" />
+                <asp:BoundField DataField="OrderDate" HeaderText="Order Date" SortExpression="OrderDate" />
+                <asp:BoundField DataField="BranchName" HeaderText="Branch Name" SortExpression="BranchName" />
                 <asp:BoundField DataField="Total" HeaderText="Total" SortExpression="Total" />
-                <asp:BoundField DataField="PaymentTransactionId" HeaderText="PaymentTransactionId" SortExpression="PaymentTransactionId" />
-                <asp:CheckBoxField DataField="HasBeenShipped" HeaderText="HasBeenShipped" SortExpression="HasBeenShipped" />
+                <asp:BoundField DataField="Email" HeaderText="User" SortExpression="Email" />
+                <asp:BoundField DataField="ProductName" HeaderText="Product Name" SortExpression="ProductName" />
+                <asp:BoundField DataField="UnitPrice" HeaderText="Current Price" SortExpression="UnitPrice" />
+                <asp:BoundField DataField="Quantity" HeaderText="Quantity" SortExpression="Quantity" />
+
             </Columns>
             <EditRowStyle BackColor="#2461BF" />
             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -34,7 +28,7 @@
             <SortedDescendingCellStyle BackColor="#E9EBEF" />
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:WingtipToys %>" SelectCommand="SELECT * FROM [Orders]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="AllTransactionsSource" runat="server" ConnectionString="<%$ ConnectionStrings:WingtipToys %>" SelectCommand="SELECT Orders.OrderId as OrderId, Orders.OrderDate as OrderDate, Branches.BranchName as BranchName, Orders.Total as Total, Orders.Email as Email, Products.ProductName as ProductName, Products.UnitPrice as UnitPrice, OrderDetails.Quantity as Quantity FROM Orders, OrderDetails, Products, Branches WHERE Orders.branch = Branches.Username AND OrderDetails.OrderId=Orders.OrderId AND OrderDetails.ProductId = Products.ProductId"></asp:SqlDataSource>
     </p>
     <p>&nbsp;</p>
     

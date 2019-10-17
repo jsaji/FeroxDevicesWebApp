@@ -11,6 +11,9 @@ namespace WingtipToys.Branch
 {
   public partial class BranchPage : System.Web.UI.Page
   {
-   
-  }
+        protected void ViewTransactionsButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Branch/BranchPageTransactions.aspx");
+        }
+    }
 }

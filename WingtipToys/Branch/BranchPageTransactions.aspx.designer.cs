@@ -7,29 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WingtipToys.Admin
+namespace WingtipToys.Branch
 {
 
 
-    public partial class AdminPage
+    public partial class BranchPageTransactions
     {
 
         /// <summary>
-        /// GridView3 control.
+        /// BranchTransactionsView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView3;
+        protected global::System.Web.UI.WebControls.GridView BranchTransactionsView;
 
         /// <summary>
-        /// SqlDataSource3 control.
+        /// BranchTransactionSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource3;
+        protected global::System.Web.UI.WebControls.SqlDataSource BranchTransactionSource;
     }
 }

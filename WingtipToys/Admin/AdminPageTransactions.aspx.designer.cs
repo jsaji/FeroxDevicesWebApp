@@ -11,25 +11,25 @@ namespace WingtipToys.Admin
 {
 
 
-    public partial class AdminPage
+    public partial class AdminPageTransactions
     {
 
         /// <summary>
-        /// GridView2 control.
+        /// AllTransactionsView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView2;
+        protected global::System.Web.UI.WebControls.GridView AllTransactionsView;
 
         /// <summary>
-        /// SqlDataSource2 control.
+        /// AllTransactionsSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
+        protected global::System.Web.UI.WebControls.SqlDataSource AllTransactionsSource;
     }
 }
