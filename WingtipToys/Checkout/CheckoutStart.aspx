@@ -21,6 +21,7 @@
             <asp:Button runat="server" Text="Log in" OnClick="LogIn" CssClass="btn btn-default" />
         </div>
     </div>
+    <br />
     <p>
         <a href="https://www.paypal.com/au/webapps/mpp/account-selection" target="_blank" >Don't have a PayPal account? Sign up now! </a>
     </p>

@@ -36,18 +36,16 @@
         </strong> 
     </div>
     <br />
-    <table> 
-    <tr>
-      <td>
+    <p>
         <asp:Button ID="UpdateBtn" runat="server" Text="Update" OnClick="UpdateBtn_Click" />
-      </td>
-      <td>
+    </p>
+    <br />
+    <p>
         <asp:ImageButton ID="CheckoutImageBtn" runat="server" 
                       ImageUrl="https://www.paypalobjects.com/webstatic/en_US/i/buttons/buy-logo-small.png" 
                       Width="158" AlternateText="Check out with PayPal" 
                       OnClick="CheckoutBtn_Click" 
                       BackColor="Transparent" BorderWidth="0" />
-      </td>
-    </tr>
-    </table>
+    </p>
+
 </asp:Content>

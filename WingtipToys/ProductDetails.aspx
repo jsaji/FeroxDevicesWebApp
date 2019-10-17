@@ -10,13 +10,15 @@
             <table>
                 <tr>
                     <td>
-                        <img src="/Catalog/Images/<%#:Item.ImagePath %>" style="border:solid; height:300px" alt="<%#:Item.ProductName %>"/>
+                        <img src="/Catalog/Images/<%#:Item.ImagePath %>" style="border:none; height:400px" alt="<%#:Item.ProductName %>"/>
                     </td>
                     <td>&nbsp;</td>  
                     <td style="vertical-align: top; text-align:left;">
                         <b>Description:</b><br /><%#:Item.Description %>
                         <br />
+                        <br />
                         <span><b>Price:</b>&nbsp;<%#: String.Format("{0:c}", Item.UnitPrice) %></span>
+                        <br />
                         <br />
                         <a href="/AddToCart.aspx?productID=<%#:Item.ProductID %>">               
                             <span>

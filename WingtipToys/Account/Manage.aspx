@@ -27,36 +27,35 @@
                         <asp:HyperLink NavigateUrl="/Account/ManagePassword" Text="[Change]" Visible="false" ID="ChangePassword" runat="server" />
                         <asp:HyperLink NavigateUrl="/Account/ManagePassword" Text="[Create]" Visible="false" ID="CreatePassword" runat="server" />
                     </dd>
-                </dl>
-                <p>
-                    Order History</p>
-                <p>
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="OrderId" DataSourceID="SqlDataSource4" Height="150px" Width="1304px">
-                        <Columns>
-                            <asp:BoundField DataField="OrderId" HeaderText="OrderId" InsertVisible="False" ReadOnly="True" SortExpression="OrderId" />
-                            <asp:BoundField DataField="OrderDate" HeaderText="OrderDate" SortExpression="OrderDate" />
-                            <asp:BoundField DataField="Username" HeaderText="Username" SortExpression="Username" />
-                            <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName" />
-                            <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName" />
-                            <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
-                            <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
-                            <asp:BoundField DataField="State" HeaderText="State" SortExpression="State" />
-                            <asp:BoundField DataField="PostalCode" HeaderText="PostalCode" SortExpression="PostalCode" />
-                            <asp:BoundField DataField="Country" HeaderText="Country" SortExpression="Country" />
-                            <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
-                            <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+                    <dt>Purchase History:</dt>
+                    <dd>
+                        <asp:GridView ID="CustomerTransactionView" runat="server" EmptyDataText="No purchases yet!" AutoGenerateColumns="False" CellPadding="4"  ForeColor="#333333" GridLines="None" DataKeyNames="OrderId, ProductName" DataSourceID="CustomerTransactionSource" Height="150px" Width="1000px">
+
+                            <Columns>
+                            <asp:BoundField DataField="OrderDate" HeaderText="Order Date" SortExpression="OrderDate" />
+                            <asp:BoundField DataField="BranchName" HeaderText="Branch Name" SortExpression="BranchName" />
                             <asp:BoundField DataField="Total" HeaderText="Total" SortExpression="Total" />
-                            <asp:BoundField DataField="PaymentTransactionId" HeaderText="PaymentTransactionId" SortExpression="PaymentTransactionId" />
-                            <asp:CheckBoxField DataField="HasBeenShipped" HeaderText="HasBeenShipped" SortExpression="HasBeenShipped" />
-                            <asp:BoundField DataField="branch" HeaderText="branch" SortExpression="branch" />
+                            <asp:BoundField DataField="ProductName" HeaderText="Product Name" SortExpression="ProductName" />
+                            <asp:BoundField DataField="UnitPrice" HeaderText="Current Price" SortExpression="UnitPrice" />
+                            <asp:BoundField DataField="Quantity" HeaderText="Quantity" SortExpression="Quantity" />
                         </Columns>
+                        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                        <RowStyle BackColor="#EFF3FB" />
+                        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                        <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                        <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                        <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                        <SortedDescendingHeaderStyle BackColor="#4870BE" />
                     </asp:GridView>
-                    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:WingtipToys %>" SelectCommand="SELECT * FROM [Orders] WHERE ([Username] = @Username)">
+                    <asp:SqlDataSource ID="CustomerTransactionSource" runat="server" ConnectionString="<%$ ConnectionStrings:WingtipToys %>" SelectCommand="SELECT Orders.OrderId as OrderId, Orders.OrderDate as OrderDate, Branches.BranchName as BranchName, Orders.Total as Total, Products.ProductName as ProductName, Products.UnitPrice as UnitPrice, OrderDetails.Quantity as Quantity FROM Orders, OrderDetails, Products, Branches WHERE Orders.branch = Branches.Username AND OrderDetails.OrderId=Orders.OrderId AND OrderDetails.ProductId = Products.ProductId AND Orders.Email = @Email">
                         <SelectParameters>
-                            <asp:Parameter Name="Username" Type="String" />
+                            <asp:SessionParameter SessionField="Email" DefaultValue="aaa@gmail.com" Name="Email" Type="String"></asp:SessionParameter>  
                         </SelectParameters>
                     </asp:SqlDataSource>
-                </p>
+                    </dd>
+                </dl>
             </div>
         </div>
     </div>

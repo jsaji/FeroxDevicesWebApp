@@ -4,7 +4,7 @@
     <hr />
     <h3>View Transactions</h3>
     <p>
-        <asp:GridView ID="AllTransactionsView" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="OrderId, ProductName" DataSourceID="AllTransactionsSource" ForeColor="#333333" GridLines="None" Width="1200px">
+        <asp:GridView ID="AllTransactionsView" runat="server" EmptyDataText="No transactions yet!" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="OrderId, ProductName" DataSourceID="AllTransactionsSource" ForeColor="#333333" GridLines="None" Width="1200px">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:BoundField DataField="OrderId" HeaderText="Order ID" SortExpression="OrderId" />
