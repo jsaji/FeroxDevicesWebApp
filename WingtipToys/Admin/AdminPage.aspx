@@ -6,4 +6,11 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  
      <asp:Button ID="TransactionLink2" runat="server" Text="View Transactions" OnClick="ViewTransactionsButton_Click" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <asp:Button ID="UserLink" runat="server" Text="View Users" OnClick="ViewUsersButton_Click" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <asp:Button ID="BranchLink" runat="server" Text="View Branches" OnClick="ViewBranchesButton_Click" />
+
 </asp:Content>

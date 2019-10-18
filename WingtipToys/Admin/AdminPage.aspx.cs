@@ -35,6 +35,18 @@ namespace WingtipToys.Admin
             Response.Redirect("~/Admin/AdminPageTransactions.aspx");
         }
 
+        
+
+            protected void ViewUsersButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Admin/AdminPageUsers.aspx");
+        }
+
+        protected void ViewBranchesButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Admin/AdminPageBranches.aspx");
+        }
+
         protected void AddProductButton_Click(object sender, EventArgs e)
     {
       Boolean fileOK = false;

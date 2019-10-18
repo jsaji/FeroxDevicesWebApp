@@ -168,6 +168,8 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="AddToCart.aspx" />
+    <Content Include="Admin\AdminPageBranches.aspx" />
+    <Content Include="Admin\AdminPageUsers.aspx" />
     <Content Include="Branch\BranchPage.aspx" />
     <Content Include="Branch\BranchPageTransactions.aspx" />
     <Content Include="Admin\AdminPageProducts.aspx" />
@@ -474,6 +476,20 @@
     </Compile>
     <Compile Include="AddToCart.aspx.designer.cs">
       <DependentUpon>AddToCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminPageBranches.aspx.cs">
+      <DependentUpon>AdminPageBranches.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminPageBranches.aspx.designer.cs">
+      <DependentUpon>AdminPageBranches.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminPageUsers.aspx.cs">
+      <DependentUpon>AdminPageUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminPageUsers.aspx.designer.cs">
+      <DependentUpon>AdminPageUsers.aspx</DependentUpon>
     </Compile>
     <Compile Include="Branch\BranchPage.aspx.cs">
       <DependentUpon>BranchPage.aspx</DependentUpon>
